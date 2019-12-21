@@ -25,7 +25,7 @@ onSubmit=(e)=>{
           User_id:this.props.auth.user.id,
        User_name:this.props.auth.user.name
         }
-        axios.post('http://localhost:5001/posts/add',post)
+        axios.post('https://devlancerbackend.herokuapp.com/posts/add',post)
         .then(res => console.log(res.data)
         ) 
         console.log(post)

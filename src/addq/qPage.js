@@ -18,7 +18,7 @@ state={
 }
   loadData = () => {
     return axios
-      .get(`http://localhost:5001/Posts/all`)
+      .get(`https://devlancerbackend.herokuapp.com/Posts/all`)
       .then(result => {
         console.log(result);
         this.setState({

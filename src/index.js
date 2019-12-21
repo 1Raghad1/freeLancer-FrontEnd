@@ -29,7 +29,7 @@ Amplify.configure({
       endpoints: [
         {
           name: "notes",
-          endpoint: 'https://devlancerbackend.herokuapp.com/',
+          endpoint: config.apiGateway.URL,
           region: config.apiGateway.REGION
         },
       ]

@@ -6,7 +6,7 @@ export default class RightSide extends Component {
     applyhundler = () => {
         const st = store.getState()
         console.log(st.auth.user.id);
-       const url = `http://localhost:5001/projects/${this.props.details._id}/addfreelancer/${st.auth.user.id}`
+       const url = `https://devlancerbackend.herokuapp.com/projects/${this.props.details._id}/addfreelancer/${st.auth.user.id}`
        //${this.props.details._id}/addfreelancer/${st.auth.user.id}
         axios({
             method: 'POST',

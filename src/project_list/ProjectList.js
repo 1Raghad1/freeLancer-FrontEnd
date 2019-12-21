@@ -17,7 +17,7 @@ export default class ProjectList extends Component {
       }
 
     componentDidMount = () =>{
-        axios.get('http://localhost:5001/projects/all')
+        axios.get('https://devlancerbackend.herokuapp.com/projects/all')
         .then(response => {
             console.log("here sta");
             
@@ -33,7 +33,7 @@ export default class ProjectList extends Component {
     }
 
     handleDetailsClick = project => {
-        const url = `http://localhost:5001/projects/${project}`
+        const url = `https://devlancerbackend.herokuapp.com/projects/${project}`
         axios({
             method: 'GET',
             url: url
