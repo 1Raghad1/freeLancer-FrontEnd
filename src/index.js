@@ -9,7 +9,7 @@ import "mdbreact/dist/css/mdb.css";
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import ButterToast from 'butter-toast/dist/lean.min.js';
+// import ButterToast from 'butter-toast/dist/lean.min.js';
 import * as serviceWorker from './serviceWorker';
 
 Amplify.configure({
