@@ -11,7 +11,7 @@ export default class ShowPost extends Component {
   };
   loadData = () => {
     return axios
-      .get(`http://localhost:5001/posts/` + this.props.match.params.id)
+      .get(`https://devlancerbackend.herokuapp.com/posts/` + this.props.match.params.id)
       .then(result => {
         console.log(result);
         this.setState({

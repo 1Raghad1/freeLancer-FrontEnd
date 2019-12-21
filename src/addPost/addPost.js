@@ -65,7 +65,7 @@ onSubmit(e){
             tags:this.state.chips,
             client_id:this.state.client_id,
         }
-        axios.post('http://localhost:5001/projects/add',project)
+        axios.post('https://devlancerbackend.herokuapp.com/projects/add',project)
         .then(res => console.log(res.data)
        
         

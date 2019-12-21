@@ -84,7 +84,7 @@ export default class CHome extends Component {
 </Card>
                 </div>
                 
-                <FTable/>
+                {/* <FTable/> */}
             </div>
         </div>
 </div>
