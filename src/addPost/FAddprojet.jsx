@@ -63,7 +63,7 @@ onSubmit(e){
           tags:this.state.chips,
           client_id:this.state.client_id,
       }
-        axios.post('http://localhost:5001/projects/add',project)
+        axios.post('https://devlancerbackend.herokuapp.com/projects/add',project)
         .then(res => console.log(res.data)
      
         
@@ -203,7 +203,7 @@ let tag = this.state.chips.map(x => x + " ");
                   <div>
                     <Container>
                       <Form>
-                        <Form.Group controlId="exampleForm.ControlInput1">
+                        <Form.Group name="exampleForm.ControlInput1">
                           <Form.Label>
                             <h1 className="classh1">
                               Choose a name for your project
@@ -216,7 +216,7 @@ let tag = this.state.chips.map(x => x + " ");
                           />
                         </Form.Group>
 
-                        <Form.Group controlId="exampleForm.ControlTextarea1">
+                        <Form.Group name="exampleForm.ControlTextarea1">
                           <Form.Label>
                             <h2>Tell us more about your project</h2>Start with a
                             bit about yourself or your business, and include an
@@ -269,17 +269,17 @@ let tag = this.state.chips.map(x => x + " ");
               )  : (
               <div>
 
-          <div class="card mb-3" className="box" style={{Width: "30%"}}>
-  <div class="row no-gutters">
-    <div class="col-md-4">
-  <img src={this.state.url} class="card-img" alt="..."/>
+          <div className="card mb-3" className="box" style={{Width: "30%"}}>
+  <div className="row no-gutters">
+    <div className="col-md-4">
+  <img src={this.state.url} className="card-img" alt="..."/>
     </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title"> {this.state.Title}</h5>
-        <p class="card-text"> {this.state.desc}
-        <p>{this.state.price}</p></p>
-        <p class="card-text"><small class="text-muted">{tag}</small></p>
+    <div className="col-md-8">
+      <div className="card-body">
+        <h5 className="card-title"> {this.state.Title}</h5>
+        <p className="card-text"> {this.state.desc}</p>
+        <p>{this.state.price}</p>
+        <p className="card-text"><small className="text-muted">{tag}</small></p>
       </div>
     </div>
   </div>

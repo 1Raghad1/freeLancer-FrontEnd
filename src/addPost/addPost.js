@@ -43,7 +43,7 @@ const steps = [
       activeStep: 1,
       Title: "",
       desc: "",
-      paytype: 0,
+      paytype: 'fixed',
       price: "",
       client_id:this.props.auth.user.id,
     
@@ -273,89 +273,90 @@ let tag = this.state.chips.map(x => x + " ");
                   />
                 </div>
               ) : this.state.activeStep === 3 ? (
-                <div>
-                  <div class="container1">
-                    <form class="form cf">
-                      <section class="plan cf">
-                        <h1 className="classh1">How do you want to pay?</h1>
-                        <Row style={{ marginTop: "10%", marginLeft: "25%" }}>
-                         <div  onChange={this.Changepaytype} >
-                          <input
-                            type="radio"
-                            name="radio1"
-                            id="free"
-                            value="fixed"
-                            inline
-                       onChange={this.Changepaytype}
-                         checked={this.state.paytype === 'fixed'}
-                          />{" "}
-                          <label
-                            style={{ width: "50%" }}
-                            class="free-label four col"
-                            for="free"
-                          >
-                            {" "}
-                            <h2 inline>Pay fixed price</h2>{" "}
-                            <p>
-                              Agree on a price and release payment when the job
-                              is done. Best for one-off tasks.
-                            </p>{" "}
-                          </label>
-                          <input
-                            type="radio"
-                            name="radio2"
-                            id="basic"
-                            value="byHour"
-                            checked={this.state.paytype === 'byHour'}
-                            onChange={this.Changepaytype}
-                         />
-                          <label class="basic-label four col" for="basic">
-                            <h2>Pay by the hour</h2>
-                            <p>
-                              Hire based on an hourly rate and pay for hours
-                              billed. Best for ongoing work.
-                            </p>
-                          </label>
-                          </div>
-                        </Row>
-                      </section>
-                    </form>
+                <div></div>
+              //   <div>
+              //     <div className="container1">
+              //       <form className="form cf">
+              //         <section class="plan cf">
+              //           <h1 className="classh1">How do you want to pay?</h1>
+              //           <Row style={{ marginTop: "10%", marginLeft: "25%" }}>
+              //            <div  onChange={this.Changepaytype} >
+              //             <input
+              //               type="radio"
+              //               name="radio1"
+              //               id="free"
+              //               value="fixed"
+              //               inline
+              //          onChange={this.Changepaytype}
+              //            checked={this.state.paytype === 'fixed'}
+              //             />{" "}
+              //             <label
+              //               style={{ width: "50%" }}
+              //               className="free-label four col"
+              //               for="free"
+              //             >
+              //               {" "}
+              //               <h2 inline>Pay fixed price</h2>{" "}
+              //               <p>
+              //                 Agree on a price and release payment when the job
+              //                 is done. Best for one-off tasks.
+              //               </p>{" "}
+              //             </label>
+              //             <input
+              //               type="radio"
+              //               name="radio2"
+              //               id="basic"
+              //               value="byHour"
+              //               checked={this.state.paytype === 'byHour'}
+              //               onChange={this.Changepaytype}
+              //            />
+              //             <label class="basic-label four col" for="basic">
+              //               <h2>Pay by the hour</h2>
+              //               <p>
+              //                 Hire based on an hourly rate and pay for hours
+              //                 billed. Best for ongoing work.
+              //               </p>
+              //             </label>
+              //             </div>
+              //           </Row>
+              //         </section>
+              //       </form>
 
-                    <InputGroup className="mb-3">
-                      <InputGroup.Append>
-                        <InputGroup.Text
-                          value={this.state.price}
-                          onChange={this.ChangePrice}
-                          type="text"
-                        >
-                          $
-                        </InputGroup.Text>
-                      </InputGroup.Append>
-                      <Form>
-                        <Form.Control
-                          value={this.state.price}
-                          onChange={this.ChangePrice}
-                          type="text"
-                          // aria-label="Amount (to the nearest dollar)"
-                        />
-                      </Form>
-                    </InputGroup>
-                  </div>
-                </div>
+              //       <InputGroup className="mb-3">
+              //         <InputGroup.Append>
+              //           <InputGroup.Text
+              //             value={this.state.price}
+              //             onChange={this.ChangePrice}
+              //             type="text"
+              //           >
+              //             $
+              //           </InputGroup.Text>
+              //         </InputGroup.Append>
+              //         <Form>
+              //           <Form.Control
+              //             value={this.state.price}
+              //             onChange={this.ChangePrice}
+              //             type="text"
+              //             // aria-label="Amount (to the nearest dollar)"
+              //           />
+              //         </Form>
+              //       </InputGroup>
+              //     </div>
+              //   </div>
               ) : (
               <div>
 
-          <div class="card mb-3" className="box" style={{Width: "30%"}}>
-  <div class="row no-gutters">
-    <div class="col-md-4">
-  <img src={this.state.url} class="card-img" alt="..."/>
+          <div className="card mb-3" className="box" style={{Width: "30%"}}>
+  <div className="row no-gutters">
+    <div className="col-md-4">
+  <img src={this.state.url} className="card-img" alt="..."/>
     </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title"> {this.state.Title}</h5>
-        <p class="card-text"> {this.state.desc}
-        <p>{this.state.price}</p></p>
-        <p class="card-text"><small class="text-muted">{tag}</small></p>
+    <div className="col-md-8">
+      <div className="card-body">
+        <h5 className="card-title"> {this.state.Title}</h5>
+        <p className="card-text"> {this.state.desc}</p>
+        <p>{this.state.price}</p>
+        <p className="card-text"><small className="text-muted">{tag}</small></p>
       </div>
     </div>
   </div>

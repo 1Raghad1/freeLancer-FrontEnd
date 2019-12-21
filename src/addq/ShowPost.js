@@ -62,7 +62,7 @@ export default class ShowPost extends Component {
         >
           <Card.Header>
             <img
-              class="ui avatar image"
+              className="ui avatar image"
               src="https://capenetworks.com/static/images/testimonials/user-icon.svg"
             />{" "}
             {this.state.data.User_name + " "} question :{" "}
@@ -82,13 +82,13 @@ export default class ShowPost extends Component {
                 {this.state.data.tags + " "}
               </p>
             </small>
-            <Card.Text>
+            <Card.Text as='div'>
               <br />
               <h5>{this.state.data.description}</h5>
             </Card.Text>
           </Card.Body>
           <Form style={{marginTop:"200px"}}>
-            <Form.Group controlId="exampleForm.ControlTextarea1">
+            <Form.Group name="exampleForm.ControlTextarea1">
               <Form.Label>
                 <h2>Your Answer</h2>
               </Form.Label>

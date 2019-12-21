@@ -38,17 +38,18 @@ this.loadData()
     render() {
       let Questions
 if (this.state.loading === false) {  Questions = this.state.data.map(item => 
- <div >
-   <div  style={{width:"1000px",marginTop:"-50px",marginLeft:"-300px",marginBottom:"60px"}} class="ui card">
-  <div  class="content">
-    <div style={{float:"left"}} class="header">{item.title}</div>
+ <div key={item._id} >
+   
+   <div  style={{width:"1000px",marginTop:"-50px",marginLeft:"-300px",marginBottom:"60px"}} className="ui card">
+  <div  className="content">
+    <div style={{float:"left"}} className="header">{item.title}</div>
     
-    <div class="meta">
-      <span class="right floated time">{item.date.substring(0,10)}</span>
+    <div className="meta">
+      <span className="right floated time">{item.date.substring(0,10)}</span>
       <br/>
-      <span style={{float:"left",color:"black"}} class="category"> {"  "+item.tags + "  "} </span>
+      <span style={{float:"left",color:"black"}} className="category"> {"  "+item.tags + "  "} </span>
     </div>
-    <div style={{float:"left"}} class="description">
+    <div style={{float:"left"}} className="description">
       <p >
          {item.description.substring(0,110) + "..."}
            <span ><NavLink  style={{color:"blue",border:"none"}} to={`/post/${item._id}`}>more</NavLink></span>
@@ -56,13 +57,13 @@ if (this.state.loading === false) {  Questions = this.state.data.map(item =>
     
     </div> 
   </div>
-  <div class="extra content">
+  <div className="extra content">
   
-    <div class="right floated author">
-      <img class="ui avatar image" src="https://capenetworks.com/static/images/testimonials/user-icon.svg"/> {item.User_name}
+    <div className="right floated author">
+      <img className="ui avatar image" src="https://capenetworks.com/static/images/testimonials/user-icon.svg"/> {item.User_name}
     </div>
-       <i class="right floated like icon"></i>
-    <i class="right floated star icon"></i>
+       <i className="right floated like icon"></i>
+    <i className="right floated star icon"></i>
   </div>
 
 </div>
@@ -83,7 +84,7 @@ if (this.state.loading === false) {  Questions = this.state.data.map(item =>
             <Image style={{float:"right" , width:"190px" , }} src='https://risemutual.org/wp-content/uploads/2018/02/solving-problems-icon.png' />
             <br/>
        </div>
-        <Col cclass="col-3" >
+        <Col className="col-3" >
 
         <AddQ/> 
         </Col>  
@@ -91,36 +92,36 @@ if (this.state.loading === false) {  Questions = this.state.data.map(item =>
             
 <Row> 
         
-     <Col class="col-3" >
+     <Col className="col-3" >
 
 <Card style={{ width: '18rem',marginTop:"-80px",height:"400px" , position:"fixed"}} className="text-center">
   <Card.Header>Filter</Card.Header>
   <Card.Body>
     <Card.Title>Select langouge </Card.Title>
-    <Card.Text>
+    <Card.Text as ='div'>
     <div>
   <input type="radio" id="css" name="drone" value="css"
          />
-  <label for="css" style={{marginLeft:"4px"}}> Css</label>
+  <label  style={{marginLeft:"4px"}}> Css</label>
   </div>
    <div>
   <input type="radio" id="html" name="drone" value="html"
          />
-  <label for="html" style={{marginLeft:"4px"}}> Html</label>
+  <label style={{marginLeft:"4px"}}> Html</label>
 </div>
    <div>
   <input type="radio" id="javascript" name="drone" value="javascript"
          />
-  <label for="javascript" style={{marginLeft:"4px"}}> java</label>
+  <label  style={{marginLeft:"4px"}}> java</label>
 </div>
    <div>
   <input type="radio" id="C++" name="drone" value="C++"
          />
-  <label for="C++" style={{marginLeft:"4px"}}> C++</label>
+  <label  style={{marginLeft:"4px"}}> C++</label>
 </div>
     </Card.Text>
     <Card.Title> _______  </Card.Title>
-    <Card.Text>
+    <Card.Text as ='div'>
        <div>
 
 {console.log(this.state.data)}
@@ -147,7 +148,7 @@ if (this.state.loading === false) {  Questions = this.state.data.map(item =>
   <Card.Footer className="text-muted">© 2019</Card.Footer>
 </Card>
      </Col> 
- <Col class="col-6" > 
+ <Col className="col-6" > 
 
 {Questions}
 </Col> 
